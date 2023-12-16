@@ -29,6 +29,15 @@ services:
       - "3001:3000"
     environment:
       TZ: Asia/Tokyo
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/usr/src/app
+    command: sh -c "cd app && npm start"
+    ports:
+      - "3000:3000"
 volumes:
   db:
     driver: local
