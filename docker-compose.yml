@@ -13,7 +13,7 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     security_opt:
       - seccomp:unconfined
-  backend:
+  api:
     build:
       context: ./backend/
       dockerfile: Dockerfile
@@ -30,7 +30,7 @@ services:
     environment:
       TZ: Asia/Tokyo
       SECRET_KEY_BASE: ${SECRET_KEY_BASE}
-  frontend:
+  front:
     build:
       context: ./frontend/
       dockerfile: Dockerfile
