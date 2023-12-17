@@ -5,6 +5,7 @@ https://qiita.com/zakino123/items/5f883112de45a27256b2
 ```
 git clone git@github.com:kohki-nakamura/react-ruby-mysql-docker-practiceApp.git react_rails_todo_app
 cd react-ruby-mysql-docker-practiceApp
+rm -rf .git
 
 cp .env.sample .env
 docker-compose build
